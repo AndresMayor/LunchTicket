@@ -5,14 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentActivity
 import com.example.lunchticket.LoginActivity
 import com.example.lunchticket.R
-import com.example.lunchticket.databinding.FragmentRoleBinding
+import com.example.lunchticket.databinding.FragmentLoginBinding
 
-class RoleFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private var _binding: FragmentRoleBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,26 +19,22 @@ class RoleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentRoleBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
         val view = binding.root
 
-        binding.studentRoleBtn.setOnClickListener {
-            (activity as LoginActivity).supportFragmentManager
-                .beginTransaction().replace(
-                    R.id.loginFragmentContainer, (activity as LoginActivity).loginFragment)
-                .addToBackStack("login").commit()
-
-            //showFragment((activity as LoginActivity).loginFragment)
+        binding.backBtn.setOnClickListener {
+            (activity as LoginActivity).supportFragmentManager.popBackStack()
         }
         return view
     }
 
     companion object {
-        fun newInstance() = RoleFragment()
+        fun newInstance() = LoginFragment()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
     }
 }
