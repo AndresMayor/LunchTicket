@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:id="@+id/welcomeTV"
+        style="@style/TitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Bienvenido,"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userNameTV"
+        style="@style/TitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre estudiante"
+        app:layout_constraintStart_toStartOf="@+id/welcomeTV"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTV" />
+
+    <TextView
+        android:id="@+id/userCodeTV"
+        style="@style/TitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código estudiante"
+        app:layout_constraintStart_toStartOf="@+id/userNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTV" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pictureRequiredDesc"
+        style="@style/ContainerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+        <TextView
+            android:id="@+id/textView10"
+            style="@style/DescriptionMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Antes de utilizar la aplicación, necesitas subir una foto para poder identificarte"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/photoBtn"
+            style="@style/ImageButtonDefault"
+            android:layout_width="66dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/DescriptionMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:text="Haz click para tomar una foto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photoBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/DescriptionMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Con LunchTicket puedes pedir tus almuerzos y consultar los que has pedido."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userCodeTV" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        style="@style/AppButtonSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/secondarybutton_background"
+        android:minWidth="250dp"
+        android:text="Cerrar sesión"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

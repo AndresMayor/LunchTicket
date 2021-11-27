@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         showFragment(roleFragment)
     }
 
-    fun showFragment(fragment: Fragment) {
+    private fun showFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.loginFragmentContainer, fragment)
         transaction.commit()
@@ -32,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val count = supportFragmentManager.backStackEntryCount
-        Log.e(">>>", count.toString())
         if(count == 0) {
             super.onBackPressed()
         } else {

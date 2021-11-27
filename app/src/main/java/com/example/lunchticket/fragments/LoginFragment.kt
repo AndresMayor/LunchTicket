@@ -1,11 +1,13 @@
 package com.example.lunchticket.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.LoginActivity
+import com.example.lunchticket.ProfilePictureActivity
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentLoginBinding
 
@@ -24,6 +26,12 @@ class LoginFragment : Fragment() {
 
         binding.backBtn.setOnClickListener {
             (activity as LoginActivity).supportFragmentManager.popBackStack()
+        }
+
+        binding.loginBtn.setOnClickListener {
+            val intent = Intent(context, ProfilePictureActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
         }
         return view
     }
