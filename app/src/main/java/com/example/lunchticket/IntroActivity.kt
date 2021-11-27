@@ -16,7 +16,7 @@ class IntroActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.IO) {
             delay(3000)
-            val intent = Intent(this@IntroActivity, MainActivity::class.java)
+            val intent = Intent(this@IntroActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
