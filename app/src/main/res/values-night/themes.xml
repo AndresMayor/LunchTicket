@@ -29,14 +29,56 @@
         <item name="android:textColor">@color/gray_dark</item>
     </style>
 
-    <style name="TitleMain" parent="Widget.AppCompat.TextView">
+    <style name="TitleMainBlue" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/blue</item>
     </style>
 
+    <style name="TitleMainBlack" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
+    <style name="SubTitleBlue" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="SubTitleGreen" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="SubTitlePurple" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="NumberBigGreen" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="NumberBigPurple" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/purple</item>
+    </style>
+
     <style name="DescriptionMain" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
+    <style name="DescriptionBold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/gray_dark</item>
     </style>

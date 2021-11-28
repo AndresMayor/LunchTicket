@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/welcomeTV"
-        style="@style/TitleMain"
+        style="@style/TitleMainBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/userNameTV"
-        style="@style/TitleMain"
+        style="@style/TitleMainBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nombre estudiante"
@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/userCodeTV"
-        style="@style/TitleMain"
+        style="@style/TitleMainBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Código estudiante"
