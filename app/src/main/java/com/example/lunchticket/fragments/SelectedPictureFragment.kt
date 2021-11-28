@@ -1,7 +1,9 @@
 package com.example.lunchticket.fragments
 
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -25,12 +27,17 @@ class SelectedPictureFragment : Fragment() {
         _binding = FragmentSelectedPictureBinding.inflate(layoutInflater, container, false)
         val view = binding.root
         val bitmap = (activity as ProfilePictureActivity).bitmap
-        val thumbnail = Bitmap.createScaledBitmap(bitmap!!, bitmap.width / 4, bitmap.height / 4, true)
+        val thumbnail = Bitmap.createScaledBitmap(bitmap!!, bitmap.width /4, bitmap.height / 4,true)
         binding.previewImage.setImageBitmap(thumbnail)
+
+        binding.submitPictureBtn.setOnClickListener {
+
+        }
 
         binding.cancelPictureBtn.setOnClickListener {
             (activity as ProfilePictureActivity).supportFragmentManager.popBackStack()
         }
+
         return view
     }
 
