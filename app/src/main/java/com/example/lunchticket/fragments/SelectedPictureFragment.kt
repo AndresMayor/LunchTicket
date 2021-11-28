@@ -1,5 +1,6 @@
 package com.example.lunchticket.fragments
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.LoginActivity
+import com.example.lunchticket.MainActivity
 import com.example.lunchticket.ProfilePictureActivity
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentSelectImageBinding
@@ -31,7 +33,9 @@ class SelectedPictureFragment : Fragment() {
         binding.previewImage.setImageBitmap(thumbnail)
 
         binding.submitPictureBtn.setOnClickListener {
-
+            val intent = Intent(context, MainActivity::class.java)
+            startActivity(intent)
+            activity?.finish()
         }
 
         binding.cancelPictureBtn.setOnClickListener {
