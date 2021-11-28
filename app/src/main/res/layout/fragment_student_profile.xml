@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:id="@+id/textView12"
+        style="@style/TitleMainBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Perfil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/studentPPImage"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/studentNameTV"
+        style="@style/TextProfileBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Nombre"
+        app:layout_constraintStart_toStartOf="@+id/studentPPImage"
+        app:layout_constraintTop_toBottomOf="@+id/studentPPImage" />
+
+    <TextView
+        android:id="@+id/studentCodeTV"
+        style="@style/TextProfileNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código"
+        app:layout_constraintStart_toStartOf="@+id/studentNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/studentNameTV" />
+
+    <TextView
+        android:id="@+id/studentRoleTV"
+        style="@style/TextProfileNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estudiante"
+        app:layout_constraintStart_toStartOf="@+id/studentCodeTV"
+        app:layout_constraintTop_toBottomOf="@+id/studentCodeTV" />
+
+    <Button
+        android:id="@+id/studentLogoutBtn"
+        style="@style/AppButtonSecondary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:minWidth="250dp"
+        android:text="Cerrar sesión"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentRoleTV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

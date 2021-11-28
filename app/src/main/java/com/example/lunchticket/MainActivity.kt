@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityMainBinding
 import com.example.lunchticket.fragments.HomeFragment
 import com.example.lunchticket.fragments.RequestLunchFragment
+import com.example.lunchticket.fragments.StudentProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var homeFragment: HomeFragment
     lateinit var requestLunchFragment: RequestLunchFragment
+    lateinit var studentProfileFragment: StudentProfileFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,13 +22,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         homeFragment = HomeFragment.newInstance()
         requestLunchFragment = RequestLunchFragment.newInstance()
+        studentProfileFragment = StudentProfileFragment.newInstance()
         showFragment(homeFragment)
 
         binding.studentNavigationBar.setOnItemSelectedListener { menuItem ->
-            if (menuItem.itemId == R.id.studentHomeItem) {
-                showFragment(homeFragment)
-            } else if (menuItem.itemId == R.id.requestItem) {
-                showFragment(requestLunchFragment)
+            when (menuItem.itemId) {
+                R.id.studentHomeItem -> {
+                    showFragment(homeFragment)
+                }
+                R.id.requestItem -> {
+                    showFragment(requestLunchFragment)
+                }
+                R.id.studentProfileItem -> {
+                    showFragment(studentProfileFragment)
+                }
             }
             true
         }
