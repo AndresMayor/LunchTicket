@@ -24,11 +24,15 @@ class PostListActivity : AppCompatActivity() {
         binding.postRecyclerView.setHasFixedSize(true)
         binding.postRecyclerView.adapter = adapter
 
+        binding.closePostListBtn.setOnClickListener {
+            finish()
+        }
+
         adapter.addPost(
             Post(
                 UUID.randomUUID().toString(),
                 "Prueba titulo",
-                "Hola",
+                "Con la nuevo aplicación LunchTicket, los beneficiarios podrán  solicitar sus almuerzos y los restaurantes podrán llevar seguimiento de los almuerzos que han dado.",
                 Calendar.getInstance().time.time
             )
         )

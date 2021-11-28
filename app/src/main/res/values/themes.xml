@@ -68,6 +68,12 @@
     <style name="DatePostPreview" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_normal</item>
+    </style>
+
+    <style name="MessagePost" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/gray_dark</item>
     </style>
 
