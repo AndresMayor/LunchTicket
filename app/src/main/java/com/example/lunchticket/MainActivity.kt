@@ -5,11 +5,13 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityMainBinding
 import com.example.lunchticket.fragments.HomeFragment
+import com.example.lunchticket.fragments.RequestLunchFragment
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var homeFragment: HomeFragment
+    lateinit var requestLunchFragment: RequestLunchFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         homeFragment = HomeFragment.newInstance()
+        requestLunchFragment = RequestLunchFragment.newInstance()
         showFragment(homeFragment)
     }
 

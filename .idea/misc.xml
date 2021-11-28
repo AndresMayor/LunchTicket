@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/drawable/altbutton_background.xml" value="0.22777777777777777" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/drawable/backbutton_background.xml" value="0.23703703703703705" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/drawable/container_background.xml" value="0.23148148148148148" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/drawable/edittext_background.xml" value="0.23703703703703705" />
@@ -23,6 +24,7 @@
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_login.xml" value="0.4" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_not_picture.xml" value="0.264" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_request_lunch.xml" value="0.2" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_role.xml" value="0.2" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_select_image.xml" value="0.4" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/layout/fragment_selected_picture.xml" value="0.264" />
