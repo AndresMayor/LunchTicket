@@ -59,6 +59,18 @@
         <item name="android:textColor">@color/purple</item>
     </style>
 
+    <style name="TitlePostPreview" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
+    <style name="DatePostPreview" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
     <style name="NumberBigGreen" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="android:textSize">60sp</item>

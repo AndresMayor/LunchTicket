@@ -5,7 +5,8 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
@@ -15,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LunchTicket">
-
+        <activity
+            android:name=".PostListActivity"
+            android:exported="false" />
         <activity
             android:name=".ProfilePictureActivity"
             android:exported="false" />
@@ -36,13 +39,14 @@
             android:exported="true" />
 
         <provider
-            android:authorities="com.example.lunchticket"
             android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.lunchticket"
             android:exported="false"
             android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/paths"/>
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
         </provider>
-
     </application>
 
 </manifest>
