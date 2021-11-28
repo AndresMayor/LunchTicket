@@ -21,6 +21,15 @@ class MainActivity : AppCompatActivity() {
         homeFragment = HomeFragment.newInstance()
         requestLunchFragment = RequestLunchFragment.newInstance()
         showFragment(homeFragment)
+
+        binding.studentNavigationBar.setOnItemSelectedListener { menuItem ->
+            if (menuItem.itemId == R.id.studentHomeItem) {
+                showFragment(homeFragment)
+            } else if (menuItem.itemId == R.id.requestItem) {
+                showFragment(requestLunchFragment)
+            }
+            true
+        }
     }
 
     private fun showFragment(fragment: Fragment) {
@@ -37,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         val count = supportFragmentManager.backStackEntryCount
-        if(count == 0) {
+        if (count == 0) {
             super.onBackPressed()
         } else {
             supportFragmentManager.popBackStack()
