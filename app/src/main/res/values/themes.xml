@@ -108,4 +108,10 @@
         <item name="android:textColor">@color/gray_dark</item>
         <item name="android:textColorHint">@color/gray_medium</item>
     </style>
+
+    <style name="NavigationBar" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/white</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+    </style>
 </resources>

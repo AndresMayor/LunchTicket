@@ -13,4 +13,5 @@
     <color name="gray_dark">#535353</color>
     <color name="gray_medium">#CCD1DA</color>
     <color name="gray_light">#F9FCFF</color>
+    <color name="inactiveBottomNavItem">#504173DC</color>
 </resources>
