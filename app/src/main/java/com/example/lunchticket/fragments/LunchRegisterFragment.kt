@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.R
-import com.example.lunchticket.databinding.FragmentRequestLunchBinding
+import com.example.lunchticket.databinding.FragmentLunchRegisterBinding
 
-class RequestLunchFragment : Fragment() {
+// Fragmento para mostrar el lector QR del perfil de restaurante
 
-    // Fragmento para generar el codigo QR del perfil del estudiante
+class LunchRegisterFragment : Fragment() {
 
-    private var _binding: FragmentRequestLunchBinding? = null
+    private var _binding: FragmentLunchRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,13 +20,13 @@ class RequestLunchFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentRequestLunchBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentLunchRegisterBinding.inflate(layoutInflater, container, false)
         val view = binding.root
         return view
     }
 
     companion object {
-        fun newInstance() = RequestLunchFragment()
+        fun newInstance() = LunchRegisterFragment()
     }
 
     override fun onDestroyView() {

@@ -8,6 +8,8 @@ import java.util.*
 
 class PostViewActivity : AppCompatActivity() {
 
+    // Actividad para ver una publicacion especifica, sirve para estudiantes y apoyo financiero
+
     private lateinit var binding: ActivityPostViewBinding
     private lateinit var post: Post
 

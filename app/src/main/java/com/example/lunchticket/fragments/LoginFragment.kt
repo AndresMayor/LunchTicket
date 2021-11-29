@@ -13,6 +13,8 @@ import com.example.lunchticket.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
 
+    // Fragmento para pantalla de login, luego de haber seleccionado un perfil
+
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 

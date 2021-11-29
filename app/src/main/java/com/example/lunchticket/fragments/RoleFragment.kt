@@ -12,6 +12,8 @@ import com.example.lunchticket.databinding.FragmentRoleBinding
 
 class RoleFragment : Fragment() {
 
+    // Fragmento para seleccionar rol del usuario
+
     private var _binding: FragmentRoleBinding? = null
     private val binding get() = _binding!!
 

@@ -10,6 +10,8 @@ import com.example.lunchticket.databinding.FragmentStudentProfileBinding
 
 class StudentProfileFragment : Fragment() {
 
+    // Fragmento que muestra el perfil del estudiante
+
     private var _binding: FragmentStudentProfileBinding? = null
     private val binding get() = _binding!!
 

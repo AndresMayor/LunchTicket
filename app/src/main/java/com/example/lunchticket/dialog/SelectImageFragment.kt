@@ -11,6 +11,9 @@ import com.example.lunchticket.databinding.FragmentSelectImageBinding
 
 class SelectImageFragment : DialogFragment() {
 
+    // Es un dialogFragment para elegir entre galeria y camara, se usa en el registro de
+    // nuevos restaurantes
+
     private lateinit var binding: FragmentSelectImageBinding
 
     override fun onStart() {

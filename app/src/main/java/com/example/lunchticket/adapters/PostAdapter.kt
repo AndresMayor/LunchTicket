@@ -12,6 +12,7 @@ import kotlin.collections.ArrayList
 
 class PostAdapter : RecyclerView.Adapter<PostView>() {
 
+    // Adaptador para lista de publicaciones
     private val postList = ArrayList<Post>()
 
     fun addPost(post: Post) {

@@ -59,6 +59,12 @@
         <item name="android:textColor">@color/purple</item>
     </style>
 
+    <style name="SubTitleGray" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
     <style name="TitlePostPreview" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">18sp</item>
@@ -87,6 +93,12 @@
         <item name="fontFamily">@font/montserrat_bold</item>
         <item name="android:textSize">60sp</item>
         <item name="android:textColor">@color/purple</item>
+    </style>
+
+    <style name="NumberBigGray" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
     </style>
 
     <style name="DescriptionMain" parent="Widget.AppCompat.TextView">

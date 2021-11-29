@@ -13,6 +13,8 @@ import com.example.lunchticket.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
 
+    // Fragmento para pantalla principal de estudiante
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
