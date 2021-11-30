@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/restaurantHomeItem"
+        android:icon="@drawable/home_icon"
+        android:title="Principal" />
+    <item
+        android:id="@+id/lunchRegisterItem"
+        android:icon="@drawable/registerlunch_icon"
+        android:title="Registrar" />
+    <item
+        android:id="@+id/restaurantHistoryItem"
+        android:icon="@drawable/history_icon"
+        android:title="Historial" />
+    <item
+        android:id="@+id/restaurantProfileItem"
+        android:icon="@drawable/profile_icon"
+        android:title="Perfil" />
+</menu>
