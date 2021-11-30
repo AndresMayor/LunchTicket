@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         restaurantHomeFragment = RestaurantHomeFragment.newInstance()
         requestLunchFragment = RequestLunchFragment.newInstance()
         studentProfileFragment = StudentProfileFragment.newInstance()
-        showFragment(restaurantHomeFragment)
+        showFragment(homeFragment)
 
         binding.studentNavigationBar.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {

@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LunchTicket">
         <activity
+            android:name=".RestaurantMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostViewActivity"
             android:exported="false" />
         <activity
