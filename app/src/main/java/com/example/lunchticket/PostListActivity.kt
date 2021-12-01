@@ -1,5 +1,6 @@
 package com.example.lunchticket
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,11 @@ class PostListActivity : AppCompatActivity() {
 
         binding.closePostListBtn.setOnClickListener {
             finish()
+        }
+
+        binding.createNewPostBtn.setOnClickListener {
+            val intent = Intent(this, CreatePostActivity::class.java)
+            startActivity(intent)
         }
 
         adapter.addPost(

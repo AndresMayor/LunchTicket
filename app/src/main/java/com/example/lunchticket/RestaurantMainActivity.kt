@@ -39,17 +39,18 @@ class RestaurantMainActivity : AppCompatActivity() {
             }
             true
         }
+        showFragment(restaurantHomeFragment)
     }
 
     private fun showFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.mainFragmentContainer, fragment)
+        transaction.replace(R.id.restaurantFragmentContainer, fragment)
         transaction.commit()
     }
 
     private fun nextFragment(fragment: Fragment, tag: String) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.loginFragmentContainer, fragment).addToBackStack(tag)
+        transaction.replace(R.id.restaurantFragmentContainer, fragment).addToBackStack(tag)
         transaction.commit()
     }
 }

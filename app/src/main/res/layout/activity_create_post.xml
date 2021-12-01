@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MainLayoutStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreatePostActivity">
+
+    <ImageButton
+        android:id="@+id/createBackBtn"
+        style="@style/BackButton"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backarrow"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/titleLabel"
+        style="@style/InputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Título"
+        app:layout_constraintStart_toStartOf="@+id/postTitleET"
+        app:layout_constraintTop_toBottomOf="@+id/createBackBtn" />
+
+    <EditText
+        android:id="@+id/postTitleET"
+        style="@style/EditTextInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Título de la publicación"
+        android:inputType="textPersonName"
+        android:minWidth="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+    <TextView
+        android:id="@+id/descLabel"
+        style="@style/InputLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Descripción"
+        app:layout_constraintStart_toStartOf="@+id/postDescriptionET"
+        app:layout_constraintTop_toBottomOf="@+id/postTitleET" />
+
+    <EditText
+        android:id="@+id/postDescriptionET"
+        style="@style/EditTextInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Descripción de la publicación."
+        android:inputType="textMultiLine"
+        android:minWidth="250dp"
+        android:minHeight="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descLabel" />
+
+    <Button
+        android:id="@+id/sendPostBtn"
+        style="@style/AppButtonMain"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Publicar"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toEndOf="@+id/postDescriptionET"
+        app:layout_constraintStart_toStartOf="@+id/postDescriptionET"
+        app:layout_constraintTop_toBottomOf="@+id/postDescriptionET" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

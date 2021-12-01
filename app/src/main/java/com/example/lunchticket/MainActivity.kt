@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var homeFragment: HomeFragment
-    lateinit var restaurantHomeFragment: RestaurantHomeFragment
     lateinit var requestLunchFragment: RequestLunchFragment
     lateinit var studentProfileFragment: StudentProfileFragment
 
@@ -23,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         homeFragment = HomeFragment.newInstance()
-        restaurantHomeFragment = RestaurantHomeFragment.newInstance()
         requestLunchFragment = RequestLunchFragment.newInstance()
         studentProfileFragment = StudentProfileFragment.newInstance()
         showFragment(homeFragment)
@@ -52,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun nextFragment(fragment: Fragment, tag: String) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.loginFragmentContainer, fragment).addToBackStack(tag)
+        transaction.replace(R.id.mainFragmentContainer, fragment).addToBackStack(tag)
         transaction.commit()
     }
 

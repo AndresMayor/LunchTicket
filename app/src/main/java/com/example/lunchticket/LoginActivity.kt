@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var roleFragment: RoleFragment
     lateinit var loginFragment: LoginFragment
     lateinit var binding: ActivityLoginBinding
+    var selectedRole: String = "student"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
