@@ -1,12 +1,19 @@
 package com.example.lunchticket
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lunchticket.adapters.PostAdapter
 import com.example.lunchticket.databinding.ActivityPostListBinding
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import java.util.*
+import kotlin.collections.ArrayList
 
 class PostListActivity : AppCompatActivity() {
 
@@ -16,6 +23,8 @@ class PostListActivity : AppCompatActivity() {
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var adapter: PostAdapter
     private lateinit var binding: ActivityPostListBinding
+    private var posts: ArrayList<Post> = ArrayList()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,14 +45,21 @@ class PostListActivity : AppCompatActivity() {
             val intent = Intent(this, CreatePostActivity::class.java)
             startActivity(intent)
         }
-
-        adapter.addPost(
-            Post(
-                UUID.randomUUID().toString(),
-                "Prueba titulo",
-                "Con la nuevo aplicación LunchTicket, los beneficiarios podrán  solicitar sus almuerzos y los restaurantes podrán llevar seguimiento de los almuerzos que han dado.",
-                Calendar.getInstance().time.time
-            )
-        )
+        getPostList()
+       
     }
+
+    fun getPostList(){
+        Firebase.firestore.collection("posts").get()
+            .addOnCompleteListener { task ->
+                for (doc in task.result!!) {
+                    val post = doc.toObject(Post::class.java)
+                    Log.e(">>>", post.title)
+                    adapter.addPost(post)
+                    posts.add(post)
+                }
+            }
+    }
+
+
 }
