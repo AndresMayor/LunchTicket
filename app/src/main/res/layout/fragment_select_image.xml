@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/fromGalleryBtn"
         style="@style/ImageButtonDefault"
         android:layout_width="52dp"
         android:layout_height="52dp"
@@ -27,15 +27,15 @@
         android:layout_marginEnd="24dp"
         android:scaleType="fitCenter"
         android:src="@drawable/gallery"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/fromCameraBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/fromCameraBtn"
+        app:layout_constraintTop_toTopOf="@+id/fromCameraBtn"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/fromCameraBtn"
         style="@style/ImageButtonDefault"
         android:layout_width="66dp"
         android:layout_height="52dp"
@@ -46,7 +46,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/camera"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/fromGalleryBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
