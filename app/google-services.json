@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "204283873250",
+    "project_id": "lunchticket-e76f0",
+    "storage_bucket": "lunchticket-e76f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204283873250:android:9ef47e423e8c1136ba1bbb",
+        "android_client_info": {
+          "package_name": "com.example.lunchticket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "204283873250-9uld3sat53ekdlo6miqrg701h55nrjb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgLCzF6bc68o1vx5U8WZlF0ChKaB7oHW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "204283873250-9uld3sat53ekdlo6miqrg701h55nrjb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
