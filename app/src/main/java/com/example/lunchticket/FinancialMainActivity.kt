@@ -5,10 +5,12 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityFinancialMainBinding
 import com.example.lunchticket.fragments.FinancialHomeFragment
+import com.example.lunchticket.fragments.FinancialRegisterFragment
 
 class FinancialMainActivity : AppCompatActivity() {
 
     private lateinit var financialHomeFragment: FinancialHomeFragment
+    private lateinit var financialRegisterFragment: FinancialRegisterFragment
     private lateinit var binding: ActivityFinancialMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,11 +20,15 @@ class FinancialMainActivity : AppCompatActivity() {
         setContentView(view)
 
         financialHomeFragment = FinancialHomeFragment.newInstance()
+        financialRegisterFragment = FinancialRegisterFragment.newInstance()
 
         binding.financialNavigationBar.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.financialHomeItem -> {
                     showFragment(financialHomeFragment)
+                }
+                R.id.financialRegisterItem -> {
+                    showFragment(financialRegisterFragment)
                 }
             }
             true
