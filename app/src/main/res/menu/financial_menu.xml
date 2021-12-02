@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/financialHomeItem"
+        android:icon="@drawable/home_icon"
+        android:title="Principal" />
+    <item
+        android:id="@+id/financialRegisterItem"
+        android:icon="@drawable/financialregister_icon"
+        android:title="Registrar" />
+    <item
+        android:id="@+id/financialHistoryItem"
+        android:icon="@drawable/history_icon"
+        android:title="Historial" />
+    <item
+        android:id="@+id/financialProfileItem"
+        android:icon="@drawable/profile_icon"
+        android:title="Perfil" />
+</menu>

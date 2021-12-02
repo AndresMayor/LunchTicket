@@ -17,6 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LunchTicket">
         <activity
+            android:name=".RegisterNewRestaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FinancialMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePostActivity"
+            android:exported="false" />
+        <activity
             android:name=".RestaurantMainActivity"
             android:exported="false" />
         <activity

@@ -26,12 +26,18 @@ class RoleFragment : Fragment() {
         val view = binding.root
 
         binding.studentRoleBtn.setOnClickListener {
-            (activity as LoginActivity).supportFragmentManager
-                .beginTransaction().replace(
-                    R.id.loginFragmentContainer, (activity as LoginActivity).loginFragment)
-                .addToBackStack("login").commit()
+            (activity as LoginActivity).selectedRole = "student"
+            nextFragment()
+        }
 
-            //showFragment((activity as LoginActivity).loginFragment)
+        binding.restaurantRoleBtn.setOnClickListener {
+            (activity as LoginActivity).selectedRole = "restaurant"
+            nextFragment()
+        }
+
+        binding.financialRoleBtn.setOnClickListener {
+            (activity as LoginActivity).selectedRole = "financial"
+            nextFragment()
         }
         return view
     }
@@ -43,5 +49,12 @@ class RoleFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun nextFragment() {
+        (activity as LoginActivity).supportFragmentManager
+            .beginTransaction().replace(
+                R.id.loginFragmentContainer, (activity as LoginActivity).loginFragment)
+            .addToBackStack("login").commit()
     }
 }
