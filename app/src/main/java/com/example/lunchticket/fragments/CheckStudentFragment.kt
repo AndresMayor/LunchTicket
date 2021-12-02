@@ -1,21 +1,17 @@
 package com.example.lunchticket.fragments
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.lunchticket.PostListActivity
-import com.example.lunchticket.ProfilePictureActivity
 import com.example.lunchticket.R
-import com.example.lunchticket.databinding.FragmentHomeBinding
+import com.example.lunchticket.databinding.FragmentCheckStudentBinding
 
-class HomeFragment : Fragment() {
+class CheckStudentFragment : Fragment() {
 
-    // Fragmento para pantalla principal de estudiante
-
-    private var _binding: FragmentHomeBinding? = null
+    // Fragmento para aprobar o rechazar el almuerzo de un estudiante
+    private var _binding: FragmentCheckStudentBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -23,18 +19,13 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentHomeBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentCheckStudentBinding.inflate(layoutInflater, container, false)
         val view = binding.root
-
-        binding.homePostBtn.setOnClickListener {
-            val intent = Intent(context, PostListActivity::class.java)
-            startActivity(intent)
-        }
         return view
     }
 
     companion object {
-        fun newInstance() = HomeFragment()
+        fun newInstance() = CheckStudentFragment()
     }
 
     override fun onDestroyView() {

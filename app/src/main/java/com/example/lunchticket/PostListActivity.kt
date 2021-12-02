@@ -9,6 +9,9 @@ import java.util.*
 
 class PostListActivity : AppCompatActivity() {
 
+    // Actividad que muestra las publicaciones de apoyo financiero, puede servir tanto para
+    // estudiantes como para apoyo financiero
+
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var adapter: PostAdapter
     private lateinit var binding: ActivityPostListBinding

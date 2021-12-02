@@ -6,12 +6,14 @@ import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityMainBinding
 import com.example.lunchticket.fragments.HomeFragment
 import com.example.lunchticket.fragments.RequestLunchFragment
+import com.example.lunchticket.fragments.RestaurantHomeFragment
 import com.example.lunchticket.fragments.StudentProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainBinding
     lateinit var homeFragment: HomeFragment
+    lateinit var restaurantHomeFragment: RestaurantHomeFragment
     lateinit var requestLunchFragment: RequestLunchFragment
     lateinit var studentProfileFragment: StudentProfileFragment
 
@@ -21,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         homeFragment = HomeFragment.newInstance()
+        restaurantHomeFragment = RestaurantHomeFragment.newInstance()
         requestLunchFragment = RequestLunchFragment.newInstance()
         studentProfileFragment = StudentProfileFragment.newInstance()
         showFragment(homeFragment)

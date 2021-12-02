@@ -31,6 +31,8 @@ import java.util.*
 
 class NotPictureFragment : Fragment() {
 
+    // Fragmento para que el usuario pueda tomar una foto si no tiene una
+
     private var _binding: FragmentNotPictureBinding? = null
     private val binding get() = _binding!!
     private var file: File? = null

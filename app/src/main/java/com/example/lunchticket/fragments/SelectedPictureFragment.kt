@@ -18,6 +18,8 @@ import com.example.lunchticket.databinding.FragmentSelectedPictureBinding
 
 class SelectedPictureFragment : Fragment() {
 
+    // Fragmento para mostrar la foto que tomo el estudiante
+
     private var _binding: FragmentSelectedPictureBinding? = null
     private val binding get() = _binding!!
 

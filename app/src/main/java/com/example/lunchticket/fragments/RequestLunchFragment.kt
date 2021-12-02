@@ -18,6 +18,8 @@ import java.util.*
 
 class RequestLunchFragment : Fragment() {
 
+    // Fragmento para generar el codigo QR del perfil del estudiante
+
     private var _binding: FragmentRequestLunchBinding? = null
     private val binding get() = _binding!!
 

@@ -10,6 +10,8 @@ import com.example.lunchticket.fragments.RoleFragment
 
 class LoginActivity : AppCompatActivity() {
 
+    // Actividad que abarca la seleccion del rol y el login
+
     lateinit var roleFragment: RoleFragment
     lateinit var loginFragment: LoginFragment
     lateinit var binding: ActivityLoginBinding

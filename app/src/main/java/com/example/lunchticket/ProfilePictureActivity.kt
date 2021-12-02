@@ -10,6 +10,8 @@ import com.example.lunchticket.fragments.SelectedPictureFragment
 
 class ProfilePictureActivity : AppCompatActivity() {
 
+    // Actividad que aparece si el estudiante no tiene una foto registrada aun
+
     lateinit var notPictureFragment: NotPictureFragment
     lateinit var selectedPictureFragment: SelectedPictureFragment
     lateinit var binding: ActivityProfilePictureBinding
