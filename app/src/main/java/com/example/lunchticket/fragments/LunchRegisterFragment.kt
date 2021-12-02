@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.Manifest
+import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.content.pm.PackageManager
 import android.graphics.ImageFormat
@@ -43,7 +44,7 @@ class LunchRegisterFragment : Fragment() {
 
     private var _binding: FragmentLunchRegisterBinding? = null
     private val binding get() = _binding!!
-
+    private var dialog: AlertDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,6 +55,14 @@ class LunchRegisterFragment : Fragment() {
         val view = binding.root
 
         if (allPermissionsGranted()) {
+            val dialogBuilder: AlertDialog.Builder? = activity?.let {
+                AlertDialog.Builder(it)
+            }
+            dialogBuilder?.setMessage("")
+                ?.setTitle("QR encontrado")
+
+            dialog = dialogBuilder?.create()
+
             startCamera()
         } else {
             ActivityCompat.requestPermissions(
@@ -82,10 +91,11 @@ class LunchRegisterFragment : Fragment() {
                 .also {
                     it.setAnalyzer(ContextCompat.getMainExecutor(requireContext()), QRCodeImageAnalyzer(object : QRCodeFoundListener {
                         override fun onQRCodeFound(qrCode: String?){
-                            Log.e(">>>>>", "habemus qr : $qrCode")
+                            dialog?.setMessage(qrCode)
+                            dialog?.show()
                         }
                         override fun qrCodeNotFound(){
-                            Log.e(">>>>>", "no habemus qr :(")
+                            dialog?.hide()
                         }
                     }))
                 }
