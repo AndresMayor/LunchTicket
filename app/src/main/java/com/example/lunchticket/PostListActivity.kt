@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lunchticket.adapters.PostAdapter
 import com.example.lunchticket.databinding.ActivityPostListBinding
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
@@ -50,7 +51,7 @@ class PostListActivity : AppCompatActivity() {
     }
 
     fun getPostList(){
-        Firebase.firestore.collection("posts").get()
+        Firebase.firestore.collection("posts").orderBy("date", Query.Direction.DESCENDING).get()
             .addOnCompleteListener { task ->
                 for (doc in task.result!!) {
                     val post = doc.toObject(Post::class.java)
