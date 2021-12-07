@@ -23,6 +23,10 @@
         <item name="android:elevation">5dp</item>
     </style>
 
+    <style name="HistoryLayoutStyle">
+        <item name="android:background">@drawable/historyitem_background</item>
+    </style>
+
     <style name="TitleLogin" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/poppins_semibold</item>
         <item name="android:textSize">24sp</item>
@@ -125,6 +129,18 @@
         <item name="android:textColor">@color/gray_dark</item>
     </style>
 
+    <style name="TextHistoryNormal" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
+    <style name="TextHistoryBold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
     <style name="TextRoleBtn" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">18sp</item>
@@ -188,6 +204,11 @@
 
     <style name="ImageButtonDefault" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">#00FFFFFF</item>
+    </style>
+
+    <style name="ImageButtonGreen" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/mainbutton_background</item>
+        <item name="android:elevation">5dp</item>
     </style>
 
     <style name="EditTextInput" parent="Widget.AppCompat.EditText">
