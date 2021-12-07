@@ -50,4 +50,9 @@ class SelectedPictureFragment : Fragment() {
     companion object {
         fun newInstance() = SelectedPictureFragment()
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }
