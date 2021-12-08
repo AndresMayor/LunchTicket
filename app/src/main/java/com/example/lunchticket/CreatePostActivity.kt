@@ -3,9 +3,9 @@ package com.example.lunchticket
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.example.lunchticket.databinding.ActivityCreatePostBinding
+import com.example.lunchticket.model.Post
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.util.*

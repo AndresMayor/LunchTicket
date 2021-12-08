@@ -3,7 +3,7 @@ package com.example.lunchticket.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lunchticket.Post
+import com.example.lunchticket.model.Post
 import com.example.lunchticket.R
 import com.example.lunchticket.views.PostView
 import java.text.SimpleDateFormat

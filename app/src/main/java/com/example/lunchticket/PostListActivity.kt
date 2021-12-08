@@ -1,19 +1,16 @@
 package com.example.lunchticket
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.lunchticket.adapters.PostAdapter
 import com.example.lunchticket.databinding.ActivityPostListBinding
-import com.google.firebase.firestore.FirebaseFirestore
+import com.example.lunchticket.model.Post
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import java.util.*
 import kotlin.collections.ArrayList
 
 class PostListActivity : AppCompatActivity() {

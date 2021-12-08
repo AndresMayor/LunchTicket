@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lunchticket.HistoryItem
-import com.example.lunchticket.R
+import com.example.lunchticket.model.LunchOrder
 import com.example.lunchticket.adapters.HistoryAdapter
 import com.example.lunchticket.databinding.FragmentRestaurantHistoryBinding
 import java.util.*
@@ -33,13 +31,17 @@ class RestaurantHistoryFragment : Fragment() {
         binding.restaurantRecyclerView.setHasFixedSize(true)
         binding.restaurantRecyclerView.adapter = adapter
 
-        adapter.addHistoryItem(HistoryItem(
+        adapter.addHistoryItem(
+            LunchOrder(
             UUID.randomUUID().toString(),
             "Estudiante Prueba Primero",
             "A00123456",
+            "isabella12345",
+            "Isabella",
             Calendar.getInstance().time.time,
             ""
-        ))
+        )
+        )
         return view
     }
 

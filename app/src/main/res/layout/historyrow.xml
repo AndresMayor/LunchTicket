@@ -18,9 +18,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="94dp"
-            android:layout_height="120dp"
+            android:id="@+id/historyViewProfileImage"
+            android:layout_width="80dp"
+            android:layout_height="140dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
@@ -59,7 +59,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Nombre del estudiante"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toEndOf="@+id/historyViewProfileImage"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -101,5 +101,25 @@
             app:layout_constraintBottom_toBottomOf="@+id/textView59"
             app:layout_constraintStart_toEndOf="@+id/textView59"
             app:layout_constraintTop_toTopOf="@+id/textView59" />
+
+        <TextView
+            android:id="@+id/textView54"
+            style="@style/TextHistoryBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurante:"
+            app:layout_constraintStart_toStartOf="@+id/textView59"
+            app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+        <TextView
+            android:id="@+id/historyViewRestaurantNameTV"
+            style="@style/TextHistoryNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Nombre rest"
+            app:layout_constraintBottom_toBottomOf="@+id/textView54"
+            app:layout_constraintStart_toEndOf="@+id/textView54"
+            app:layout_constraintTop_toTopOf="@+id/textView54" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

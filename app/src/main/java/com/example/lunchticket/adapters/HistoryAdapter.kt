@@ -3,7 +3,7 @@ package com.example.lunchticket.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lunchticket.HistoryItem
+import com.example.lunchticket.model.LunchOrder
 import com.example.lunchticket.R
 import com.example.lunchticket.views.HistoryView
 import java.text.SimpleDateFormat
@@ -12,10 +12,10 @@ import kotlin.collections.ArrayList
 
 class HistoryAdapter: RecyclerView.Adapter<HistoryView>() {
 
-    private var historyList = ArrayList<HistoryItem>()
+    private var historyList = ArrayList<LunchOrder>()
 
-    fun addHistoryItem(historyItem: HistoryItem) {
-        historyList.add(historyItem)
+    fun addHistoryItem(lunchOrder: LunchOrder) {
+        historyList.add(lunchOrder)
         notifyItemInserted(historyList.size - 1)
     }
 
@@ -28,7 +28,7 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryView>() {
 
     override fun onBindViewHolder(holder: HistoryView, position: Int) {
         val historyItem = historyList[position]
-        holder.historyItem = historyItem
+        holder.lunchOrder = historyItem
         holder.historyViewName.text = historyItem.studentName
 
         // Fecha
@@ -40,6 +40,8 @@ class HistoryAdapter: RecyclerView.Adapter<HistoryView>() {
         val hour = dateTime.toString().split(" ")[1]
         holder.historyViewDate.text = date
         holder.historyViewHour.text = hour
+
+        holder.historyViewRestaurantName.text = historyItem.restaurantName
 
         // Hora
         /*val cal = Calendar.getInstance()
