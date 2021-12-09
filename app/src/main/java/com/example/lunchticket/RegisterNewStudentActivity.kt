@@ -17,7 +17,7 @@ class RegisterNewStudentActivity : AppCompatActivity() {
 
         binding.registerStudentBtn.setOnClickListener {
             val dialog = SuccessfulFragment()
-            dialog.show(supportFragmentManager, "StudentSuccessful//9")
+            dialog.show(supportFragmentManager, "StudentSuccessful")
         }
 
         binding.stuCreateBackBtn.setOnClickListener {
