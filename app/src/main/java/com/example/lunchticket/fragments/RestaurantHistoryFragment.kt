@@ -31,9 +31,9 @@ class RestaurantHistoryFragment : Fragment() {
         val view = binding.root
         adapter = HistoryAdapter()
         layoutManager = LinearLayoutManager(activity)
-        binding.restaurantRecyclerView.layoutManager = layoutManager
-        binding.restaurantRecyclerView.setHasFixedSize(true)
-        binding.restaurantRecyclerView.adapter = adapter
+        binding.restaurantHistoryRecyclerView.layoutManager = layoutManager
+        binding.restaurantHistoryRecyclerView.setHasFixedSize(true)
+        binding.restaurantHistoryRecyclerView.adapter = adapter
 
         // Spinner adapter
         val aaYear = ArrayAdapter<String>(fragmentContext!!, android.R.layout.simple_spinner_dropdown_item)
