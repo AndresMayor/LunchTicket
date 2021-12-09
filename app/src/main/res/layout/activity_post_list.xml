@@ -32,7 +32,7 @@
         android:id="@+id/closePostListBtn"
         style="@style/ImageButtonDefault"
         android:layout_width="48dp"
-        android:layout_height="24dp"
+        android:layout_height="32dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="24dp"
         android:scaleType="fitCenter"
