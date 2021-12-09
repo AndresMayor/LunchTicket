@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
 import com.example.lunchticket.databinding.ActivityCreatePostBinding
 import com.example.lunchticket.model.Post
 import com.google.firebase.firestore.ktx.firestore
@@ -28,14 +29,12 @@ class CreatePostActivity : AppCompatActivity() {
             val post = Post(postId, postTitle, postDescription, postDate)
             Firebase.firestore.collection("posts").document(postId).set(post)
             Toast.makeText(this, "Publicación creada con éxito", Toast.LENGTH_SHORT).show()
-
+            finish()
         }
 
         binding.createBackBtn.setOnClickListener {
-            val intent = Intent(this, PostListActivity::class.java)
-            startActivity(intent)
+            finish()
         }
-
-
     }
+
 }
