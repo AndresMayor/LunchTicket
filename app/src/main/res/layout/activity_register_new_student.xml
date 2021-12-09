@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/activeStudentSearchBtn">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/registerStudentBtn"
             style="@style/AppButtonMain"
             android:layout_width="250dp"
             android:layout_height="wrap_content"

@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.lunchticket.databinding.ActivityRegisterNewRestaurantBinding
 import com.example.lunchticket.dialog.SelectImageFragment
+import com.example.lunchticket.dialog.SuccessfulFragment
 
 class RegisterNewRestaurantActivity : AppCompatActivity() {
 
@@ -36,6 +37,11 @@ class RegisterNewRestaurantActivity : AppCompatActivity() {
                     Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE,
                     Manifest.permission.WRITE_EXTERNAL_STORAGE),1)
             }
+        }
+
+        binding.registerRestaurantBtn.setOnClickListener {
+            val dialog = SuccessfulFragment()
+            dialog.show(supportFragmentManager, "RestaurantSuccessful")
         }
 
         binding.resCreateBackBtn.setOnClickListener {
