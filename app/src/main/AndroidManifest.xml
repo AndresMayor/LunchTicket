@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LunchTicket">
         <activity
+            android:name=".RegisterNewStudentActivity"
+            android:exported="false" />
+        <activity
             android:name=".FinancialRejectedLunchActivity"
             android:exported="false" />
         <activity
@@ -63,11 +66,11 @@
                 android:resource="@xml/paths" />
         </provider>
     </application>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
-    <uses-permission android:name="android.permission.CAMERA" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

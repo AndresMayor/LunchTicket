@@ -38,7 +38,7 @@ class RegisterNewRestaurantActivity : AppCompatActivity() {
             }
         }
 
-        binding.resCreatebBackBtn.setOnClickListener {
+        binding.resCreateBackBtn.setOnClickListener {
             finish()
         }
     }

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.example.lunchticket.PostListActivity
 import com.example.lunchticket.R
 import com.example.lunchticket.RegisterNewRestaurantActivity
+import com.example.lunchticket.RegisterNewStudentActivity
 import com.example.lunchticket.databinding.FragmentFinancialRegisterBinding
 
 class FinancialRegisterFragment : Fragment() {
@@ -23,6 +24,11 @@ class FinancialRegisterFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentFinancialRegisterBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+
+        binding.registerNewStudentBtn.setOnClickListener {
+            val intent = Intent(context, RegisterNewStudentActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.registerNewRestaurantBtn.setOnClickListener {
             val intent = Intent(context, RegisterNewRestaurantActivity::class.java)
