@@ -8,6 +8,7 @@ data class LunchOrder(
     var studentIdentification: String = "",
     var restaurantId: String = "",
     var restaurantName: String = "",
+    var status: String = "",
     var date: Long = 0,
     var imageUrl: String = ""
 ): Serializable

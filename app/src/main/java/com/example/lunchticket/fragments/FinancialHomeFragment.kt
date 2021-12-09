@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.lunchticket.FinancialRejectedLunchActivity
 import com.example.lunchticket.FinancialRestaurantsDataActivity
 import com.example.lunchticket.PostListActivity
 import com.example.lunchticket.R
@@ -26,6 +27,11 @@ class FinancialHomeFragment : Fragment() {
 
         binding.financialRestaurantDataBtn.setOnClickListener {
             val intent = Intent(context, FinancialRestaurantsDataActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.financialRejectedBtn.setOnClickListener {
+            val intent = Intent(context, FinancialRejectedLunchActivity::class.java)
             startActivity(intent)
         }
 

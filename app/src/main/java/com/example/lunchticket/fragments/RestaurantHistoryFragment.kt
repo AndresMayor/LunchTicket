@@ -47,6 +47,7 @@ class RestaurantHistoryFragment : Fragment() {
                 "A00123456",
                 "isabella12345",
                 "Isabella",
+                "approved",
                 Calendar.getInstance().time.time,
                 ""
             )
