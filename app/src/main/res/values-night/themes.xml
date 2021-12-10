@@ -234,9 +234,13 @@
         <item name="itemTextColor">@color/bottom_nav_item_color</item>
     </style>
 
-    <style name="AppSpinner" parent="Widget.AppCompat.Spinner">
-        <item name="android:fontFamily">@font/poppins_regular</item>
+    <style name="DateSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/date_spinner_background</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:dropDownVerticalOffset">48dp</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:textColor">@color/gray_dark</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:popupBackground">@color/white</item>
     </style>
+
 </resources>

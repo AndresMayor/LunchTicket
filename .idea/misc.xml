@@ -44,18 +44,26 @@
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/menu/restaurant_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/menu/student_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/LunchTicket/app/src/main/res/xml/paths.xml" value="0.25416666666666665" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.225" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/date_spinner_background.xml" value="0.225" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/edittext_background.xml" value="0.24259259259259258" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/historyitem_background.xml" value="0.7928571428571428" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/ic_arrow_down.xml" value="0.225" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/ic_launcher_background.xml" value="0.225" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/iconimagebutton_background.xml" value="0.24259259259259258" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/mainbutton_background.xml" value="0.24259259259259258" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/drawable/spinner_background.xml" value="0.22777777777777777" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_financial_main.xml" value="0.20108695652173914" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_financial_rejected_lunch.xml" value="0.264" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_financial_restaurants_data.xml" value="0.2056159420289855" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_login.xml" value="0.21014492753623187" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_post_list.xml" value="0.15217391304347827" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_post_view.xml" value="0.2056159420289855" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_profile_picture.xml" value="0.182518115942029" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_register_new_restaurant.xml" value="0.21014492753623187" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/activity_register_new_student.xml" value="0.264" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/custom_spinner_dropdown_item.xml" value="0.1875" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/custom_spinner_item.xml" value="0.1875" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_check_student.xml" value="0.15217391304347827" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_financial_home.xml" value="0.2" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_financial_profile.xml" value="0.264" />
@@ -65,8 +73,10 @@
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_restaurant_home.xml" value="0.2056159420289855" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_restaurant_profile.xml" value="0.13949275362318841" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_select_image.xml" value="0.18704710144927536" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_selected_picture.xml" value="0.17753623188405798" />
         <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/fragment_successful.xml" value="0.2" />
-        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/historyrow.xml" value="0.4" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/historyrow.xml" value="0.128" />
+        <entry key="..\:/Universidad/Semestre8/AppsMoviles/TrabajoFinalVersiones/LunchTicket/app/src/main/res/layout/spinner_item.xml" value="0.182518115942029" />
         <entry key="..\:/Users/marco/AndroidStudioProjects/LunchTicket/app/src/main/res/layout/fragment_request_lunch.xml" value="0.16485507246376813" />
         <entry key="..\:/Usuario/Documents/MEGAsync/ICESI/Apps/LunchTicket/app/src/main/res/layout/fragment_lunch_register.xml" value="0.38697916666666665" />
         <entry key="..\:/Usuario/Documents/MEGAsync/ICESI/Apps/LunchTicket/app/src/main/res/layout/fragment_request_lunch.xml" value="0.31302083333333336" />

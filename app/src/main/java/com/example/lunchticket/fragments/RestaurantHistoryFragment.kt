@@ -3,16 +3,21 @@ package com.example.lunchticket.fragments
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.AdapterView
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.lunchticket.model.LunchOrder
+import com.example.lunchticket.adapters.DateSpinnerAdapter
 import com.example.lunchticket.adapters.HistoryAdapter
 import com.example.lunchticket.databinding.FragmentRestaurantHistoryBinding
+import com.example.lunchticket.model.DateItem
+import com.example.lunchticket.model.LunchOrder
+import java.text.DateFormatSymbols
+import java.time.YearMonth
 import java.util.*
+
 
 class RestaurantHistoryFragment : Fragment() {
 
@@ -36,9 +41,27 @@ class RestaurantHistoryFragment : Fragment() {
         binding.restaurantHistoryRecyclerView.adapter = adapter
 
         // Spinner adapter
-        val aaYear = ArrayAdapter<String>(fragmentContext!!, android.R.layout.simple_spinner_dropdown_item)
-        aaYear.addAll("2021", "2022", "2023")
-        binding.yearSpinner.adapter = aaYear
+        val yearSpinnerAdapter = DateSpinnerAdapter(fragmentContext!!)
+        yearSpinnerAdapter.addDateItem(DateItem(2021, "2021"))
+        yearSpinnerAdapter.addDateItem(DateItem(2022, "2022"))
+        yearSpinnerAdapter.addDateItem(DateItem(2023, "2023"))
+        binding.yearSpinner.adapter = yearSpinnerAdapter
+
+        val monthSpinnerAdapter = DateSpinnerAdapter(fragmentContext!!)
+        val months: Array<String> = DateFormatSymbols().months
+        months.forEachIndexed { index, element ->
+            val monthItem = DateItem(index, element.replaceFirstChar {it.uppercase()})
+            monthSpinnerAdapter.addDateItem(monthItem)
+        }
+        binding.monthSpinner.adapter = monthSpinnerAdapter
+
+        val daySpinnerAdapter = DateSpinnerAdapter(fragmentContext!!)
+        var dayIndex = 1
+        while (dayIndex < 32) {
+            daySpinnerAdapter.addDateItem(DateItem(dayIndex, dayIndex.toString()))
+            dayIndex++
+        }
+        binding.daySpinner.adapter = daySpinnerAdapter
 
         adapter.addHistoryItem(
             LunchOrder(
