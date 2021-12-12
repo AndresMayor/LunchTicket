@@ -32,7 +32,7 @@ class RequestLunchFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentRequestLunchBinding.inflate(layoutInflater, container, false)
         val view = binding.root
-        //runCounter()
+        runCounter()
 
         binding.viewRestaurantsBtn.setOnClickListener(){
             val intent = Intent(context, ShowMapActivity::class.java)
