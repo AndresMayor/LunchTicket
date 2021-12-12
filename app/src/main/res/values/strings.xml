@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">LunchTicket</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string-array name="opcionesMapa">
+        <item>Isabella</item>
+        <item>Bristo</item>
+        <item>Snack Cafe</item>
+    </string-array>
 </resources>

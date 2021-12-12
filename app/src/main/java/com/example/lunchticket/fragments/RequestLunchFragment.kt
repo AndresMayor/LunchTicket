@@ -1,5 +1,6 @@
 package com.example.lunchticket.fragments
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Bundle
@@ -8,7 +9,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import com.example.lunchticket.R
+import com.example.lunchticket.PostListActivity
+import com.example.lunchticket.ShowMapActivity
 import com.example.lunchticket.databinding.FragmentRequestLunchBinding
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -30,7 +32,13 @@ class RequestLunchFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentRequestLunchBinding.inflate(layoutInflater, container, false)
         val view = binding.root
-        runCounter()
+        //runCounter()
+
+        binding.viewRestaurantsBtn.setOnClickListener(){
+            val intent = Intent(context, ShowMapActivity::class.java)
+            startActivity(intent)
+        }
+
         return view
     }
 
@@ -95,5 +103,7 @@ class RequestLunchFragment : Fragment() {
         }
         binding.qrImage.setImageBitmap(bitmap)
     }
+
+
 
 }
