@@ -18,9 +18,13 @@
         <item name="android:background">@color/gray_light</item>
     </style>
 
-    <style name="ContainerLayout">
+    <style name="ContainerLayoutStyle">
         <item name="android:background">@drawable/container_background</item>
         <item name="android:elevation">5dp</item>
+    </style>
+
+    <style name="HistoryLayoutStyle">
+        <item name="android:background">@drawable/historyitem_background</item>
     </style>
 
     <style name="TitleLogin" parent="Widget.AppCompat.TextView">
@@ -33,6 +37,12 @@
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="TitleMainPurple" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/purple</item>
     </style>
 
     <style name="TitleMainBlack" parent="Widget.AppCompat.TextView">
@@ -125,6 +135,18 @@
         <item name="android:textColor">@color/gray_dark</item>
     </style>
 
+    <style name="TextHistoryNormal" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
+    <style name="TextHistoryBold" parent="Widget.AppCompat.TextView">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+    </style>
+
     <style name="TextRoleBtn" parent="Widget.AppCompat.TextView">
         <item name="fontFamily">@font/poppins_medium</item>
         <item name="android:textSize">18sp</item>
@@ -190,6 +212,11 @@
         <item name="android:background">#00FFFFFF</item>
     </style>
 
+    <style name="ImageButtonGreen" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/iconimagebutton_background</item>
+        <item name="android:elevation">5dp</item>
+    </style>
+
     <style name="EditTextInput" parent="Widget.AppCompat.EditText">
         <item name="android:background">@drawable/edittext_background</item>
         <item name="android:height">48dp</item>
@@ -206,4 +233,14 @@
         <item name="itemIconTint">@color/bottom_nav_item_color</item>
         <item name="itemTextColor">@color/bottom_nav_item_color</item>
     </style>
+
+    <style name="DateSpinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@drawable/date_spinner_background</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:dropDownVerticalOffset">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textColor">@color/gray_dark</item>
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
 </resources>

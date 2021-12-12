@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityRestaurantMainBinding
 import com.example.lunchticket.fragments.LunchRegisterFragment
+import com.example.lunchticket.fragments.RestaurantHistoryFragment
 import com.example.lunchticket.fragments.RestaurantHomeFragment
 import com.example.lunchticket.fragments.RestaurantProfileFragment
 
@@ -13,6 +14,7 @@ class RestaurantMainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestaurantMainBinding
     private lateinit var restaurantHomeFragment: RestaurantHomeFragment
     private lateinit var lunchRegisterFragment: LunchRegisterFragment
+    private lateinit var restaurantHistoryFragment: RestaurantHistoryFragment
     private lateinit var restaurantProfileFragment: RestaurantProfileFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,7 @@ class RestaurantMainActivity : AppCompatActivity() {
 
         restaurantHomeFragment = RestaurantHomeFragment.newInstance()
         lunchRegisterFragment = LunchRegisterFragment.newInstance()
+        restaurantHistoryFragment = RestaurantHistoryFragment.newInstance()
         restaurantProfileFragment = RestaurantProfileFragment.newInstance()
 
         binding.restaurantNavigationBar.setOnItemSelectedListener { menuItem ->
@@ -32,6 +35,9 @@ class RestaurantMainActivity : AppCompatActivity() {
                 }
                 R.id.lunchRegisterItem -> {
                     showFragment(lunchRegisterFragment)
+                }
+                R.id.restaurantHistoryItem -> {
+                    showFragment(restaurantHistoryFragment)
                 }
                 R.id.restaurantProfileItem -> {
                     showFragment(restaurantProfileFragment)

@@ -12,7 +12,7 @@
         tools:context=".RegisterNewRestaurantActivity">
 
         <ImageButton
-            android:id="@+id/resCreatebBackBtn"
+            android:id="@+id/resCreateBackBtn"
             style="@style/BackButton"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
@@ -24,23 +24,23 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            style="@style/ContainerLayout"
+            style="@style/ContainerLayoutStyle"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_marginTop="32dp"
             android:minWidth="250dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resCreatebBackBtn">
+            app:layout_constraintTop_toBottomOf="@+id/resCreateBackBtn">
 
             <TextView
                 android:id="@+id/textView40"
                 style="@style/DescriptionMain"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="8dp"
                 android:text="Haz click para tomar o elegir una foto."
                 android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -87,7 +87,7 @@
         <EditText
             android:id="@+id/restaurantNitET"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -110,7 +110,7 @@
         <EditText
             android:id="@+id/businessNameET"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -133,7 +133,7 @@
         <EditText
             android:id="@+id/restaurantNameET"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -146,7 +146,7 @@
         <EditText
             android:id="@+id/restaurantUserET"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -179,7 +179,7 @@
         <EditText
             android:id="@+id/restaurantNewPassET"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
@@ -202,7 +202,7 @@
         <EditText
             android:id="@+id/confirmPassBtn"
             style="@style/EditTextInput"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
@@ -214,7 +214,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mapButtonContainer"
-            style="@style/ContainerLayout"
+            style="@style/ContainerLayoutStyle"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -228,9 +228,9 @@
                 style="@style/DescriptionMain"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="24dp"
                 android:text="Haz click para seleccionar la ubicación."
                 android:textAlignment="center"
@@ -256,7 +256,7 @@
         <Button
             android:id="@+id/registerRestaurantBtn"
             style="@style/AppButtonMain"
-            android:layout_width="wrap_content"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="32dp"

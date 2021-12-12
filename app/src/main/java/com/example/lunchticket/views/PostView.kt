@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lunchticket.Post
+import com.example.lunchticket.model.Post
 import com.example.lunchticket.PostViewActivity
 import com.example.lunchticket.R
 

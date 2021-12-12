@@ -3,7 +3,7 @@ package com.example.lunchticket.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.lunchticket.Post
+import com.example.lunchticket.model.Post
 import com.example.lunchticket.R
 import com.example.lunchticket.views.PostView
 import java.text.SimpleDateFormat
@@ -16,8 +16,18 @@ class PostAdapter : RecyclerView.Adapter<PostView>() {
     private val postList = ArrayList<Post>()
 
     fun addPost(post: Post) {
-        postList.add(post)
-        notifyItemInserted(postList.size - 1)
+        postList.add(0, post)
+        notifyItemInserted(0)
+    }
+
+    fun removePokemon(post: Post) {
+        val index = postList.indexOf(post)
+        postList.removeAt(index)
+        notifyItemRemoved(index)
+    }
+
+    fun clearList() {
+        postList.clear()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostView {

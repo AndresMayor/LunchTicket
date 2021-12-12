@@ -41,7 +41,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/financialPostBtn"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -49,7 +49,7 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rejectedBtn">
+        app:layout_constraintTop_toBottomOf="@+id/financialRejectedBtn">
 
         <ImageView
             android:id="@+id/imageView6"
@@ -68,7 +68,7 @@
             style="@style/SubTitleBlue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="Publicaciones"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintStart_toEndOf="@+id/imageView6"
@@ -87,8 +87,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/rejectedBtn"
-        style="@style/ContainerLayout"
+        android:id="@+id/financialRejectedBtn"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -96,7 +96,7 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/financialLunchBtn">
+        app:layout_constraintTop_toBottomOf="@+id/financialRestaurantDataBtn">
 
         <ImageView
             android:id="@+id/imageView8"
@@ -115,7 +115,7 @@
             style="@style/SubTitlePurple"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="Almuerzos rechazados"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
@@ -126,15 +126,15 @@
             android:layout_width="13dp"
             android:layout_height="22dp"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/arrow_icon_blue"
+            android:src="@drawable/arrow_icon_purple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/financialLunchBtn"
-        style="@style/ContainerLayout"
+        android:id="@+id/financialRestaurantDataBtn"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -161,7 +161,7 @@
             style="@style/SubTitleBlue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="4dp"
             android:text="Consumos por cafetería"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintStart_toEndOf="@+id/imageView10"

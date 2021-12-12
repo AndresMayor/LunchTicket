@@ -1,4 +1,4 @@
-package com.example.lunchticket
+package com.example.lunchticket.model
 
 import java.io.Serializable
 

@@ -32,7 +32,18 @@ class SelectedPictureFragment : Fragment() {
         val view = binding.root
         val bitmap = (activity as ProfilePictureActivity).bitmap
         val thumbnail = Bitmap.createScaledBitmap(bitmap!!, bitmap.width /4, bitmap.height / 4,true)
-        binding.previewImage.setImageBitmap(thumbnail)
+
+        lateinit var rotatedThumbnail: Bitmap
+
+        if(bitmap.width > bitmap.height) {
+            val matrix = Matrix()
+            matrix.postRotate(90f)
+            rotatedThumbnail = Bitmap.createBitmap(
+                thumbnail, 0, 0, thumbnail.width, thumbnail.height, matrix, true)
+            binding.previewImage.setImageBitmap(rotatedThumbnail)
+        } else {
+            binding.previewImage.setImageBitmap(thumbnail)
+        }
 
         binding.submitPictureBtn.setOnClickListener {
             val intent = Intent(context, MainActivity::class.java)
@@ -49,5 +60,10 @@ class SelectedPictureFragment : Fragment() {
 
     companion object {
         fun newInstance() = SelectedPictureFragment()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

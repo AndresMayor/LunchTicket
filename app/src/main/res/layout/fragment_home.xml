@@ -49,7 +49,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/timerSection"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -121,7 +121,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/homePostBtn"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

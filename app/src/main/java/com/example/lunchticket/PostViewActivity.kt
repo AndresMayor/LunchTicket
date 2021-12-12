@@ -3,6 +3,7 @@ package com.example.lunchticket
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.lunchticket.databinding.ActivityPostViewBinding
+import com.example.lunchticket.model.Post
 import java.text.SimpleDateFormat
 import java.util.*
 

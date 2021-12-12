@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LunchTicket">
+        
         <activity
             android:name=".ShowMapActivity"
             android:exported="false" />
@@ -25,6 +26,16 @@
             android:name=".MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
+            
+        <activity
+            android:name=".RegisterNewStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FinancialRejectedLunchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FinancialRestaurantsDataActivity"
+            android:exported="false" />
         <activity
             android:name=".RegisterNewRestaurantActivity"
             android:exported="false" />

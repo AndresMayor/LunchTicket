@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.R
-import com.example.lunchticket.databinding.FragmentRestaurantProfileBinding
+import com.example.lunchticket.databinding.FragmentFinancialProfileBinding
 
-class RestaurantProfileFragment : Fragment() {
+class FinancialProfileFragment : Fragment() {
 
-    private var _binding: FragmentRestaurantProfileBinding? = null
+    private var _binding: FragmentFinancialProfileBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,13 +18,13 @@ class RestaurantProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        _binding = FragmentRestaurantProfileBinding.inflate(layoutInflater, container, false)
+        _binding = FragmentFinancialProfileBinding.inflate(layoutInflater, container, false)
         val view = binding.root
         return view
     }
 
     companion object {
-        fun newInstance() = RestaurantProfileFragment()
+        fun newInstance() = FinancialProfileFragment()
     }
 
     override fun onDestroyView() {

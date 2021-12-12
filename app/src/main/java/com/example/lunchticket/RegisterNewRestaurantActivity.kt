@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.core.content.ContextCompat
 import com.example.lunchticket.databinding.ActivityRegisterNewRestaurantBinding
 import com.example.lunchticket.dialog.SelectImageFragment
+import com.example.lunchticket.dialog.SuccessfulFragment
 
 class RegisterNewRestaurantActivity : AppCompatActivity() {
 
@@ -38,7 +39,12 @@ class RegisterNewRestaurantActivity : AppCompatActivity() {
             }
         }
 
-        binding.resCreatebBackBtn.setOnClickListener {
+        binding.registerRestaurantBtn.setOnClickListener {
+            val dialog = SuccessfulFragment()
+            dialog.show(supportFragmentManager, "RestaurantSuccessful")
+        }
+
+        binding.resCreateBackBtn.setOnClickListener {
             finish()
         }
     }

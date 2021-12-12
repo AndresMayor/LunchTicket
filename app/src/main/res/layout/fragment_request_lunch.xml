@@ -28,7 +28,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/qrContainerLayout"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="409dp"
         android:layout_height="567dp"
         android:layout_marginTop="16dp"
