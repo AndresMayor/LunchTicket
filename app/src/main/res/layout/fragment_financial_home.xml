@@ -41,7 +41,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/financialPostBtn"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -88,7 +88,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/financialRejectedBtn"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -134,7 +134,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/financialRestaurantDataBtn"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"

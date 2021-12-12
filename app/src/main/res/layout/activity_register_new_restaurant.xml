@@ -24,7 +24,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
-            style="@style/ContainerLayout"
+            style="@style/ContainerLayoutStyle"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_marginTop="32dp"
@@ -214,7 +214,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mapButtonContainer"
-            style="@style/ContainerLayout"
+            style="@style/ContainerLayoutStyle"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"

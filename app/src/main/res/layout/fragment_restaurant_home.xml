@@ -72,7 +72,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -108,7 +108,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout4"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -145,7 +145,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -193,7 +193,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        style="@style/ContainerLayout"
+        style="@style/ContainerLayoutStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
