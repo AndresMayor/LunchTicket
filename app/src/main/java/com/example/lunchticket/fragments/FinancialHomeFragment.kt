@@ -2,6 +2,7 @@ package com.example.lunchticket.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.SyncStateContract
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import com.example.lunchticket.FinancialRestaurantsDataActivity
 import com.example.lunchticket.PostListActivity
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentFinancialHomeBinding
+import com.example.lunchticket.util.Constants
 
 class FinancialHomeFragment : Fragment() {
 
@@ -40,6 +42,7 @@ class FinancialHomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.financialHomeNameTV.text = Constants.name
         return view
     }
 
