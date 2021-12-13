@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentRestaurantProfileBinding
+import com.example.lunchticket.util.Constants
 
 class RestaurantProfileFragment : Fragment() {
 
@@ -20,6 +21,9 @@ class RestaurantProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentRestaurantProfileBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+        binding.restaurantNitProfileTV.text = Constants.code
+        binding.restaurantProfileNameTV.text = Constants.name
+        binding.restaurantProfileUserTV.text = Constants.user
         return view
     }
 

@@ -26,6 +26,7 @@ import com.example.lunchticket.ProfilePictureActivity
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentNotPictureBinding
 import com.example.lunchticket.dialog.SelectImageFragment
+import com.example.lunchticket.util.Constants
 import java.io.File
 import java.util.*
 
@@ -46,6 +47,8 @@ class NotPictureFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentNotPictureBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+        binding.userNameTV.text = Constants.name
+        binding.userCodeTV.text = Constants.code
 
         val cameraLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult(), ::onResult)
@@ -79,6 +82,7 @@ class NotPictureFragment : Fragment() {
                 )*/
             }
         }
+//        Toast.makeText(context,Constants.code,Toast.LENGTH_SHORT).show()
         return view
     }
 

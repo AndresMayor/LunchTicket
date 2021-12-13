@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityRestaurantMainBinding
-import com.example.lunchticket.fragments.LunchRegisterFragment
-import com.example.lunchticket.fragments.RestaurantHistoryFragment
-import com.example.lunchticket.fragments.RestaurantHomeFragment
-import com.example.lunchticket.fragments.RestaurantProfileFragment
+import com.example.lunchticket.fragments.*
 
 class RestaurantMainActivity : AppCompatActivity() {
 
@@ -16,6 +13,7 @@ class RestaurantMainActivity : AppCompatActivity() {
     private lateinit var lunchRegisterFragment: LunchRegisterFragment
     private lateinit var restaurantHistoryFragment: RestaurantHistoryFragment
     private lateinit var restaurantProfileFragment: RestaurantProfileFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +25,7 @@ class RestaurantMainActivity : AppCompatActivity() {
         lunchRegisterFragment = LunchRegisterFragment.newInstance()
         restaurantHistoryFragment = RestaurantHistoryFragment.newInstance()
         restaurantProfileFragment = RestaurantProfileFragment.newInstance()
+        val checkStudentFragment = CheckStudentFragment.newInstance()
 
         binding.restaurantNavigationBar.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -45,10 +44,13 @@ class RestaurantMainActivity : AppCompatActivity() {
             }
             true
         }
+        lunchRegisterFragment.checkStudentFragment = checkStudentFragment
+        lunchRegisterFragment.restaurantMainActivity = this
+
         showFragment(restaurantHomeFragment)
     }
 
-    private fun showFragment(fragment: Fragment) {
+    fun showFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.restaurantFragmentContainer, fragment)
         transaction.commit()

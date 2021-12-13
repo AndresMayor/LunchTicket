@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentCheckStudentBinding
+import com.example.lunchticket.util.Constants
 
 class CheckStudentFragment : Fragment() {
 
@@ -21,6 +22,7 @@ class CheckStudentFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentCheckStudentBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+        binding.textView29.text = Constants.codestud
         return view
     }
 

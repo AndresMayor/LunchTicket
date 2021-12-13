@@ -54,9 +54,13 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     implementation("com.google.code.gson:gson:2.8.9")
     implementation('com.google.zxing:core:3.4.1')
-
+    implementation("com.android.volley:volley:1.2.1")
     def camerax_version = "1.0.2"
     implementation "androidx.camera:camera-camera2:$camerax_version"
     implementation "androidx.camera:camera-lifecycle:$camerax_version"
     implementation "androidx.camera:camera-view:1.0.0-alpha31"
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+
 }

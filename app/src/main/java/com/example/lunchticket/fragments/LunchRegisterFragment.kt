@@ -34,6 +34,12 @@ import android.graphics.ImageFormat.YUV_444_888
 import android.graphics.ImageFormat.YUV_422_888
 
 import android.graphics.ImageFormat.YUV_420_888
+import android.widget.Toast
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.example.lunchticket.RestaurantMainActivity
+import com.example.lunchticket.util.Constants
 import com.google.zxing.*
 import java.util.concurrent.Executor
 
@@ -45,6 +51,9 @@ class LunchRegisterFragment : Fragment() {
     private var _binding: FragmentLunchRegisterBinding? = null
     private val binding get() = _binding!!
     private var dialog: AlertDialog? = null
+    private var foundQR = false
+    lateinit var checkStudentFragment: CheckStudentFragment
+    lateinit var restaurantMainActivity: RestaurantMainActivity
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,13 +64,13 @@ class LunchRegisterFragment : Fragment() {
         val view = binding.root
 
         if (allPermissionsGranted()) {
-            val dialogBuilder: AlertDialog.Builder? = activity?.let {
-                AlertDialog.Builder(it)
-            }
-            dialogBuilder?.setMessage("")
-                ?.setTitle("QR encontrado")
-
-            dialog = dialogBuilder?.create()
+//            val dialogBuilder: AlertDialog.Builder? = activity?.let {
+//                AlertDialog.Builder(it)
+//            }
+//            dialogBuilder?.setMessage("")
+//                ?.setTitle("QR encontrado")
+//
+//            dialog = dialogBuilder?.create()
 
             startCamera()
         } else {
@@ -73,6 +82,7 @@ class LunchRegisterFragment : Fragment() {
     }
 
     private fun startCamera() {
+        foundQR = false
         val cameraProviderFuture = ProcessCameraProvider.getInstance(requireContext())
 
         cameraProviderFuture.addListener(Runnable {
@@ -91,11 +101,23 @@ class LunchRegisterFragment : Fragment() {
                 .also {
                     it.setAnalyzer(ContextCompat.getMainExecutor(requireContext()), QRCodeImageAnalyzer(object : QRCodeFoundListener {
                         override fun onQRCodeFound(qrCode: String?){
-                            dialog?.setMessage(qrCode)
-                            dialog?.show()
+                            if(!foundQR){
+                                foundQR = true
+                                val queue = Volley.newRequestQueue(context)
+                                val url = "${Constants.BASE_URL}/qrcode?rest=${Constants.code}&qr=${qrCode}"
+
+                                val stringRequest = StringRequest(
+                                    Request.Method.POST, url,
+                                    { response ->
+                                        Constants.codestud = response
+                                        restaurantMainActivity.showFragment(checkStudentFragment)
+                                    },
+                                    { error -> Log.e("errrorrr ",error.localizedMessage.toString()) })
+                                queue.add(stringRequest)
+                            }
+
                         }
                         override fun qrCodeNotFound(){
-                            dialog?.hide()
                         }
                     }))
                 }

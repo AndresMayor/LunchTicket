@@ -1,5 +1,6 @@
 package com.example.lunchticket
 
+import android.content.Intent
 import android.graphics.Bitmap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.lunchticket.databinding.ActivityProfilePictureBinding
 import com.example.lunchticket.fragments.NotPictureFragment
 import com.example.lunchticket.fragments.SelectedPictureFragment
+import com.example.lunchticket.util.Constants
 
 class ProfilePictureActivity : AppCompatActivity() {
 
@@ -24,7 +26,15 @@ class ProfilePictureActivity : AppCompatActivity() {
         setContentView(view)
         notPictureFragment = NotPictureFragment.newInstance()
         selectedPictureFragment = SelectedPictureFragment.newInstance()
-        showFragment(notPictureFragment)
+
+        if(Constants.user!="a" && Constants.pic==""){
+            showFragment(notPictureFragment)
+        } else{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
     }
 

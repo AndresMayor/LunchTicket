@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.lunchticket.R
 import com.example.lunchticket.databinding.FragmentRestaurantHomeBinding
+import com.example.lunchticket.util.Constants
 
 class RestaurantHomeFragment : Fragment() {
 
@@ -22,6 +23,7 @@ class RestaurantHomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentRestaurantHomeBinding.inflate(layoutInflater, container, false)
         val view = binding.root
+        binding.homeRestaurantNameTV.text = Constants.name
         return view
     }
 

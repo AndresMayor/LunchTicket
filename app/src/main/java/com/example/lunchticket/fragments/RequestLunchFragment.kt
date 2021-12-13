@@ -8,12 +8,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
-import com.example.lunchticket.PostListActivity
-import com.example.lunchticket.ShowMapActivity
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.example.lunchticket.*
 import com.example.lunchticket.databinding.FragmentRequestLunchBinding
+import com.example.lunchticket.util.Constants
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
+import io.jsonwebtoken.JwtException
+import io.jsonwebtoken.Jwts
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.*
@@ -59,23 +65,35 @@ class RequestLunchFragment : Fragment() {
              * have access to service when in reality they do not.
             */
             val lowerLimit = Calendar.getInstance(TimeZone.getTimeZone("GMT-5"))
-            lowerLimit.set(Calendar.HOUR_OF_DAY, 11)
+            lowerLimit.set(Calendar.HOUR_OF_DAY, 5)
             lowerLimit.set(Calendar.MINUTE, 0)
             val upperLimit = Calendar.getInstance(TimeZone.getTimeZone("GMT-5"))
-            upperLimit.set(Calendar.HOUR_OF_DAY, 24)
+            upperLimit.set(Calendar.HOUR_OF_DAY, 15)
             upperLimit.set(Calendar.MINUTE, 0)
 
             lifecycleScope.launch {
                 var currentTime = Calendar.getInstance(TimeZone.getTimeZone("GMT-5"))
                 while(currentTime in lowerLimit..upperLimit) {
-                    createQRCode(currentTime)
+
+                    val queue = Volley.newRequestQueue(context)
+                    val url = "${Constants.BASE_URL}/qrcode?user=${Constants.code}"
+
+                    val stringRequest = StringRequest(
+                        Request.Method.GET, url,
+                        { response ->
+                            createQRCode(response)
+                        },
+                        { error -> Toast.makeText(context,error.localizedMessage, Toast.LENGTH_SHORT).show() })
+                    queue.add(stringRequest)
+
                     var counterNotFinished = true
                     var second = 30
                     while(counterNotFinished) {
+                        delay(50)
+                        val seconds = System.currentTimeMillis()/1000
+                        second = (30 - ((seconds)%30)).toInt()
                         binding.qrTimerTV.text = "${second}s"
-                        delay(1000)
-                        second--
-                        if (second == 0) {
+                        if (second == 30) {
                             counterNotFinished = false
                         }
                     }
@@ -86,12 +104,10 @@ class RequestLunchFragment : Fragment() {
         }
     }
 
-    private fun createQRCode(date: Calendar) {
+    private fun createQRCode(msg : String) {
         val size = 512
         val bitMatrix = QRCodeWriter().encode(
-            String(
-                date.toString().toByteArray()
-            ),
+            msg,
             BarcodeFormat.QR_CODE, size, size
         )
         val bitmap = Bitmap.createBitmap(512, size, Bitmap.Config.ARGB_8888).also {
