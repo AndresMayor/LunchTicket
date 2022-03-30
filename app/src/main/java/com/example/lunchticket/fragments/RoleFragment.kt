@@ -26,17 +26,17 @@ class RoleFragment : Fragment() {
         val view = binding.root
 
         binding.studentRoleBtn.setOnClickListener {
-            (activity as LoginActivity).selectedRole = "student"
+            (activity as LoginActivity)
             nextFragment()
         }
 
         binding.restaurantRoleBtn.setOnClickListener {
-            (activity as LoginActivity).selectedRole = "restaurant"
+            (activity as LoginActivity)
             nextFragment()
         }
 
         binding.financialRoleBtn.setOnClickListener {
-            (activity as LoginActivity).selectedRole = "financial"
+            (activity as LoginActivity)
             nextFragment()
         }
         return view

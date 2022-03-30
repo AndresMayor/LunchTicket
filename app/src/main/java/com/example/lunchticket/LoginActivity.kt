@@ -12,19 +12,16 @@ class LoginActivity : AppCompatActivity() {
 
     // Actividad que abarca la seleccion del rol y el login
 
-    lateinit var roleFragment: RoleFragment
     lateinit var loginFragment: LoginFragment
     lateinit var binding: ActivityLoginBinding
-    var selectedRole: String = "student"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        roleFragment = RoleFragment.newInstance()
         loginFragment = LoginFragment.newInstance()
-        showFragment(roleFragment)
+        showFragment(loginFragment)
     }
 
     private fun showFragment(fragment: Fragment) {

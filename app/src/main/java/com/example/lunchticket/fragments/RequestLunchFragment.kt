@@ -68,7 +68,7 @@ class RequestLunchFragment : Fragment() {
             lowerLimit.set(Calendar.HOUR_OF_DAY, 5)
             lowerLimit.set(Calendar.MINUTE, 0)
             val upperLimit = Calendar.getInstance(TimeZone.getTimeZone("GMT-5"))
-            upperLimit.set(Calendar.HOUR_OF_DAY, 15)
+            upperLimit.set(Calendar.HOUR_OF_DAY, 24)
             upperLimit.set(Calendar.MINUTE, 0)
 
             lifecycleScope.launch {
